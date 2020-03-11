@@ -1,53 +1,282 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link ref="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Dang Thao - Web Developer</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133462996-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    
+</head>
 
-      gtag('config', 'UA-133462996-2');
-    </script>
+<style>
+    .basic-info p {
+        margin-bottom: 0.3rem;
+    }
 
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    .card p {
+        margin-bottom: 0.3rem;
+        margin-top: 0.3rem;
+    }
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    .card .badge,
+    .summary .badge {
+        font-weight: 500;
+        padding: 0.4rem;
+        margin: 0.1rem;
+        background: #E1ECF4 !important;
+        color: #39739d !important;
+    }
+    .e-mail:before {
+        content: attr(data-website) "\0040" attr(data-user);
+        unicode-bidi: bidi-override;
+        direction: rtl;
+    }
+    .phone:before {
+        content: attr(data-user) "-" attr(data-res);
+        unicode-bidi: bidi-override;
+        direction: rtl;
+    }
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    .experience .col-sm-8 .card {
+        border-top: 3px solid #39739d;
+    }
+
+    .card-body img {
+        max-width: 2rem;
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+
+    @media print {
+
+        .summary .badge,
+        .card .badge {
+            border: 0;
+            background: #E1ECF4 !important;
+            color: #39739d !important;
+            -webkit-print-color-adjust: exact;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .text-secondary {
+            color: #6c757d !important;
+            -webkit-print-color-adjust: exact;
+        }
+    }
+</style>
+
+<body>
+    <div class="container pt-4 pb-4">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="https://avatars0.githubusercontent.com/u/46556701?s=400&u=f16ee5490d3c8d7d2e1955a5258690b04e622b69&v=4"
+                    class="img-fluid img-thumbnail">
+                <div class="row basic-info">
+                    <div class="col mt-3">
+                        <p><i class="fas fa-phone"></i> <span class="phone" data-res="48+" data-user="964-853-969"></span></p>
+                        <p><i class="fas fa-envelope"></i> <a href="#"><span class="e-mail" data-user="41kuts.oahtgnad" data-website="moc.liamg"></span></a>
+                        </p>
+                        <p><i class="fas fa-blog"></i> <a href="www.dangthaoplus.com">www.dangthaoplus.com</a></p>
+                        <p><i class="fab fa-linkedin"></i> <a
+                                href="https://www.linkedin.com/in/thao-dang-a62201178/">thao-dang-a62201178</a></p>
+                        <p><i class="fab fa-github"></i> <a href="https://github.com/dangthaodotcom">github.com/dangthaodotcom</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <h3>DANG THACH THAO</h3>
+                <h4 class="text-secondary">Web Developer</h4>
+                <div class="summary mt-3">
+                    <p>- Wow, Writting some thing ...</p>
+                    <p>- Wow, Writting some thing ...</p>
+                    <p>- Wow, Writting some thing ...</p>
+                    <p>- Wow, Writting some thing ...</p>
+                    <p>- Wow, Writting some thing ...</p>
+                    <p>- Wow, Writting some thing ...</p>
+                    <p>- Wow, Writting some thing ...</p>
+                    <p>- Wow, Writting some thing ...</p>
+                    <p>- Wow, Writting some thing ...</p>
+                    <p>- Proficient skills:
+                        <span class="badge badge-info">PHP</span>
+                        <span class="badge badge-info">Python</span>
+                        <span class="badge badge-info">JavaScript</span>
+                        <span class="badge badge-info">Phalcon</span>
+                        <span class="badge badge-info">Odoo</span>
+                        <span class="badge badge-info">Laravel</span>
+                        <span class="badge badge-info">SCSS</span>
+                        <span class="badge badge-info">BackboneJs</span>
+                        <span class="badge badge-info">ReactJs</span>
+                        <span class="badge badge-info">Docker</span>
+                        <span class="badge badge-info">Linux</span>
+                        <span class="badge badge-info">Git</span>
+                        <span class="badge badge-info">data-structures</span>
+                        <span class="badge badge-info">problem-solver</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 experience">
+            <div class="col-sm-12">
+                <h5 class="text-danger"><i class="fas fa-history"></i> Experience</h5>
+            </div>
+            <div class="col-sm-12">
+
+                <div class="row mt-3">
+                    <div class="col-sm-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="mb-3">Junior Odoo - Python Developer</h5>
+                                <p><a href="https://www.xboss.com">
+                                        <img src="https://www.xboss.com/web/image/res.company/1/logo?unique=83193f7">
+                                        XBOSS Co., Ltd</a> </p>
+                                <p class="text-secondary">Mar 2020 - Present . 1 yr</p>
+                                <p class="text-secondary">HCMC, Vietnam</p>
+                                <p class="text-secondary"><small>Writting some thing ...</small></p>
+                                <hr>
+                                <p>- Writting some thing ...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <p><i class="fas fa-cubes"></i> Technical stack</p>
+                                <span class="badge badge-info">Python</span>
+                                <span class="badge badge-info">Odoo</span>
+                                <span class="badge badge-info">JavaScript - BackboneJs</span>
+                                <span class="badge badge-info">SCSS</span>
+                                <span class="badge badge-info">Qweb - XML</span>
+                                <span class="badge badge-info">PostgreSQL</span>
+                                <span class="badge badge-info">Docker</span>
+                                <span class="badge badge-info">Linux</span>
+                                <span class="badge badge-info">NGINX</span>
+                                <span class="badge badge-info">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-3">
+                    <div class="col-sm-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="mb-3">Junior PHP Developer</h5>
+                                <p><a href="https://www.nhadat.net/">
+                                        <img src="https://cdn.nhadat.net/public/frontend/images/logo.png">
+                                        Nhadat.net</a></p>
+                                <p class="text-secondary">Nov 2019 - Nov 2020 . 1 yr</p>
+                                <p class="text-secondary">HCMC, Vietnam</p>
+                                <p class="text-secondary"><small>Writting some thing ...</small></p>
+                                <hr>
+                                <p>- Writting some thing ...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <p><i class="fas fa-cubes"></i> Technical stack</p>
+                                <span class="badge badge-info">PHP - Phalcon Framework</span>
+                                <span class="badge badge-info">MongoDB</span>
+                                <span class="badge badge-info">JavaScript - BackboneJs</span>
+                                <span class="badge badge-info">RESTful API</span>
+                                <span class="badge badge-info">CentOS</span>
+                                <span class="badge badge-info">MySQL</span>
+                                <span class="badge badge-info">Wordpress</span>
+                                <span class="badge badge-info">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-12">
+                <h5 class="text-danger"><i class="fas fa-university"></i> Freelance Project</h5>
+            </div>
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h6> <img src="https://luxtrip.vn/public/files/2019/10/22/1571717600-logo-done3.png">
+                            Luxtrip.vn - Phalcon project</h6>
+                        <p>Design, frontend, backend, config server</p>
+                        <p class="text-secondary"><small>Luxtrip.vn is some one some things some body...</small></p>
+                        <p class="text-secondary">May 2019 - Jul 2017 . 9 mos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p><i class="fas fa-cubes"></i> Technical stack</p>
+                        <span class="badge badge-info">PHP - Phalcon Framework</span>
+                        <span class="badge badge-info">MySQL</span>
+                        <span class="badge badge-info">JavaScript - JQuery</span>
+                        <span class="badge badge-info">HTML/CSS</span>
+                        <span class="badge badge-info">CentOS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-8">
+                <h5 class="text-danger"><i class="fas fa-university"></i> Education</h5>
+                <div class="card">
+                    <div class="card-body">
+                        <h6> <img
+                                src="http://www.stu.edu.vn/images/logo_en.png">
+                            STU - SaiGon Technology University</h6>
+                        <p>Bechelor, Information Technology (7.2/10)</p>
+                        <p class="text-secondary">2014 - 2018</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6"></div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-12">
+                <h5 class="text-danger"><i class="fas fa-book-reader"></i> Hobbies & Activities</h5>
+            </div>
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <p>- Exploring new technologies<br>
+                                    - Open source contributing<br>
+                                    - Reading, Blogging for technical<br>
+                                    - Video games
+                                </p>
+                            </div>
+                            <div class="col-sm-4 border-left">
+                                <h6><i class="fas fa-mug-hot"></i> Side projects</h6>
+                                <p>- <a href="https://sandientu.net">sandientu.net</a>
+                                    <small class="text-secondary">.use PHP - Laravel</small></p>
+                                <p>- <a href="https://ee-work.com">ee-work.com</a>
+                                    <small class="text-secondary">.use PHP - Laravel</small></p>
+                                <p>- <a href="https://hatdieu.org">hatdieu.org</a>
+                                    <small class="text-secondary">.maintenance, PHP - Wordpress</small></p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+</body>
+<footer>
+
+</footer>
 </html>
